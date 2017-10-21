@@ -1,0 +1,91 @@
+<!DOCTYPE  html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Registration page</title>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/datepicker.min.css" />
+<script src="/js/lib/jquery.js"></script>
+
+<script src="/js/ValidationForm.js"></script>
+<script src="/js/datepicker.js"></script>
+<script src="/js/datepicker.en.js"></script>
+</head>
+<body>
+
+	<div class="wrapper fadeInDown">
+		<div id="formContent">
+			<!-- Tabs Titles -->
+			<h2 class="active">Sign Up</h2>
+			<h2 class="inactive underlineHover">Sign In</h2>
+
+
+			<div class="fadeIn first">
+				<img src="img/icon.svg" id="icon" alt="User Icon" />
+			</div>
+
+			<!-- Login Form -->
+			<form action="/signup">
+				<input type="text" 
+				data-val="^[_a-zA-Z ]+$" 
+				data-val-msg="Use only latin symbols"
+				data-val-msg-id="userNameMsg" 
+				id="login" class="fadeIn second"
+				name="name" 
+				placeholder="Enter your first name *"><br>
+				<span id="userNameMsg"></span>
+					
+				<input type="text" 
+				id="familyName" 
+				data-val="^[_a-zA-Z ]+$" 
+				data-val-msg="Use only latin symbols" 
+				class="fadeIn third" 
+				name="familyName" 
+				placeholder="Enter your family name *" 
+				data-val-msg-id="familyNameMsg"> <br>
+				<span id="familyNameMsg"></span>
+					
+				<input type="text"
+				class="fadeIn fourth" name="age"
+				placeholder="Enter your age *"
+				id="age"
+				data-val="/^\d{1,3}$/"
+                 data-val-msg="Use numbers from 0 - 99"
+                 data-val-msg-id="ageMsg" /> <br>
+				<span id="ageMsg"></span>
+					
+				<input type="text"
+				id="adress" 
+				data-val="\S"
+				data-val-msg="Use only latin symbols" 
+				class="fadeIn fifth" 
+				name="adress"
+				placeholder="Enter your adress" 
+				data-val-msg-id="adressMsg"> <br>
+				<span id="adressMsg"></span>
+					
+				<input type='text'
+				readonly="true"
+				class='datepicker-here fadeIn six' 
+				data-position="right top"
+				placeholder="Chose your Date of birth *" 
+				name="data"
+				id ="dataInput"
+				data-data="\S"
+				 />
+				
+					
+				<input type="submit"
+				class="fadeIn seven" 
+				value="Log In">
+			</form>
+
+			<!-- Remind Passowrd -->
+			<div id="formFooter">
+				<a class="underlineHover" href="#">Forgot Password?</a>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
